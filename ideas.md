@@ -11,5 +11,5 @@ title: Ideas
   {% assign filtered_items = site[collection_name] | where_exp: "item", "item.path contains 'x_' and item.path ends_with '.md'" %}
   {% for item in filtered_items %}
     <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-  {% end for %}
+  {% endfor %}
 </ul>
