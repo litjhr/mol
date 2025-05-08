@@ -3,10 +3,11 @@ layout: default
 title: Blogs
 ---
 
-<h1>Blogs</h1>
+{% assign collection_name = "blogs" %}  
+<h1>{{ collection_name | capitalize }}</h1> 
 <ul>
-  {% assign filtered_blogs = site.blogs | where_exp: "blog", "blog.path contains 'x_' and blog.path ends_with '.md'" %}
-  {% for blog in filtered_blogs %}
-    <li><a href="{{ blog.url | relative_url }}">{{ blog.title }}</a></li>
-  {% endfor %}
+  {% assign filtered_items = site[collection_name] | where_exp: "item", "item.path contains 'x_' and item.path ends_with '.md'" %}
+  {% for item in filtered_items %}
+    <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+  {% for %}
 </ul>
