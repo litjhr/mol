@@ -1,0 +1,18 @@
+title: Your Site Title
+description: Your site description
+baseurl: ""
+url: "https://your-github-username.github.io/your-project-name"
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-relative-links
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby
